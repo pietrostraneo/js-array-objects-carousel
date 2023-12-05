@@ -28,30 +28,22 @@ let img = document.querySelector(`img`)
 let gameTitle = document.querySelector(`h2`)
 let gameInfo = document.querySelector(`h5`)
 
-// images.forEach((elem) =>{
-//     console.log(elem.image)
-// })
-
-console.log(images[0].image)
-
 let i = 0;
 next.addEventListener(`click`, function(){
     i++
+    if(i > 4){
+        i = 0
+    }
     img.src = images[i].image
     gameTitle.innerText = images[i].title
     gameInfo.innerText = images[i].text
-    if(i == 4){
-        i = 0
-        i--
-    }
 })
 prev.addEventListener(`click`, function(){
     i--
+    if(i < 0){
+        i = 4 
+    }
     img.src = images[i].image
     gameTitle.innerText = images[i].title
     gameInfo.innerText = images[i].text
-    if (i == 0){
-        i = 4
-        i++
-    }
 })
