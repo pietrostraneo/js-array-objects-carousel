@@ -22,8 +22,8 @@ const images = [
     }
 ];
 
-let next = document.getElementById(`next`);
-let prev = document.getElementById(`prev`);
+let next = document.querySelector(`.next`);
+let prev = document.querySelector(`.prev`);
 let img = document.querySelector(`img`)
 let gameTitle = document.querySelector(`h2`)
 let gameInfo = document.querySelector(`h5`)
